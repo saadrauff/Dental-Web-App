@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Appointments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+          <div class="logo">E-Dental Admin Panel</div>
+          <nav class="navbar">
+              <a href="admin.html">Admin</a>
+            <a href="admin-orders.html">Orders</a>
+            <a href="admin-appointments.html">Appointments</a>
+            <button onclick="logoutAdmin()" class="logout-btn">Logout</button>
+          </nav>
+        
+      
+    </header>
+
+    <section class="appointment-container">
+      <h1 class="section-title">Admin - Appointment Management</h1><br>
+        <h2 class="section-title">Pending Appointments</h2>
+        <div class="table-wrapper">
+            <table class="appointment-table">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Date</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="appointmentList"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="admin.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Dental | Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="checkAdminSession(); loadProducts(); loadOrders();">
+
+  <!-- Loader -->
+  <div id="loader"><div class="spinner"></div></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">E-Dental Admin Panel</div>
+    <nav class="navbar">
+        <a href="admin.html">Admin</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="admin-appointments.html">Appointments</a>
+      <button onclick="logoutAdmin()" class="logout-btn">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Admin Section -->
+  <section class="admin-dashboard">
+    <h1>Manage Products</h1>
+
+    <!-- Product Form -->
+    <form id="productForm" class="admin-form">
+      <input type="text" id="productName" placeholder="Product Name" required />
+      <input type="number" id="productPrice" placeholder="Product Price" required />
+      <input type="text" id="productImage" placeholder="Image URL" required />
+      <button type="submit">Add Product</button>
+    </form>
+
+    <!-- Product List -->
+    <section class="products" id="adminProductList">
+      <!-- Dynamic product list -->
+    </section>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 E-Dental Admin Panel.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

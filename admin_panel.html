@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="hideLoader(); checkAdminSession(); loadProducts();">
+
+  <div id="loader"></div>
+
+  <header>
+    <h1>Admin Panel</h1>
+    <button onclick="logoutAdmin()">Logout</button>
+  </header>
+
+  <section class="form-section">
+    <h2>Add New Product</h2>
+    <form id="productForm">
+      <input type="text" id="productName" placeholder="Product Name" required />
+      <input type="number" id="productPrice" placeholder="Product Price" required />
+      <input type="text" id="productImage" placeholder="Image URL" required />
+      <button type="submit">Add Product</button>
+    </form>
+  </section>
+
+  <section class="products" id="adminProductList">
+    <!-- Dynamic product list -->
+  </section>
+
+  <footer><p>&copy; 2025 E-Dental Care</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

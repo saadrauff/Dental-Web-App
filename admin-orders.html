@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Dental | Admin Orders</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="checkAdminSession(); loadOrders();">
+
+  <!-- Loader -->
+  <div id="loader"><div class="spinner"></div></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Admin Orders</div>
+    <nav class="navbar">
+      <a href="admin.html">Admin</a>
+      <a href="product.html">Product</a>
+      <a href="admin-appointments.html">Appointments</a>
+      <button onclick="logoutAdmin()" class="logout-btn">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Orders Section -->
+  <section class="admin-dashboard">
+    <h1>Customer Orders</h1>
+    <table class="admin-table" id="orderTable">
+      <thead>
+        <tr>
+          <th>Order #</th>
+          <th>Products</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Orders will appear dynamically -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 E-Dental Admin Panel.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

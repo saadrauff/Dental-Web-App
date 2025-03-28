@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+       
+  <header class="header">
+    <div class="logo">Admin Dashboard</div>
+    <nav class="navbar">
+        <a href="admin.html">Admin</a>
+      <a href="product.html">Products</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="admin-appointments.html">Appointments</a>
+      <button onclick="logoutAdmin()" class="logout-btn">Logout</button>
+    </nav>
+  </header>
+  <div class="admin-container">
+        <div class="admin-cards">
+            <h2 class="admin-text">For Manage Products</h2><br>
+            <div class="admin-card">
+                <a href="product.html" class="admin-link">
+                    <h3>Manage Products</h3> </a>
+                    <p>Add, edit, or delete products.</p>
+               
+            </div><br>
+
+            <h2 class="admin-text">For Check Appointments</h2><br>
+            <div class="admin-card">
+                <a href="admin-appointments.html" class="admin-link">
+                    <h3>Manage Appointments</h3></a>
+                    <p>View and manage patient appointments.</p>
+                
+            </div><br>
+
+            <h2 class="admin-text">For Check Orders</h2><br>
+            <div class="admin-card">
+                <a href="admin-orders.html" class="admin-link">
+                    <h3>Manage Orders</h3>  </a>
+                    <p>View and update orders.</p>
+              
+            </div><br><br>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

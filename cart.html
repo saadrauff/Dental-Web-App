@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Dental | Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadCart();">
+
+  <!-- Loader -->
+  <div id="loader"><div class="spinner"></div></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">E-Dental</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="appointment.html">Book Appointment</a>
+      <a href="shop.html">Accessories</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    </nav>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <h2>Your Cart</h2>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Cart items dynamically loaded -->
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      <p id="cart-total">Total: Rs. 0.00</p>
+      <button onclick="checkout()" class="btn">Checkout</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 E-Dental. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

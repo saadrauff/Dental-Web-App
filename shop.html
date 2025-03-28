@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Dental | Accessories Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadShopProducts();">
+
+  <!-- Loader -->
+  <div id="loader"><div class="spinner"></div></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">E-Dental</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="appointment.html">Book Appointment</a>
+      <a href="shop.html">Accessories</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    </nav>
+  </header>
+
+  <!-- Shop Banner -->
+  <section class="shop-banner">
+    <h1>Dental Accessories</h1>
+    <p>Shop the best dental accessories added by admin!</p>
+  </section>
+
+  <!-- Accessories Section -->
+  <section class="accessories" id="shopProductList">
+    <!-- Dynamic products will appear here -->
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 E-Dental. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

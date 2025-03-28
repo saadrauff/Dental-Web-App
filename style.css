@@ -1,0 +1,707 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #b39ddb;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #512da8;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #f8bbd0;
+}
+
+.login-btn, .logout-btn {
+  background: #f71061;
+  color: #ebe8f1;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('../images/dental-bg.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  color: #080808;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: slideIn 1.2s ease;
+}
+
+.hero-text h1 span { color: #f71061; }
+
+.hero-text p { color: #141313; margin-bottom: 30px; }
+
+.btn {
+  padding: 12px 25px;
+  background: #be1751;
+  color: #512da8;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: 0.4s;
+}
+
+.btn:hover { background: #8c319c; }
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background: #f3e5f5;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #1ac954;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  margin: 10px;
+  width: 250px;
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.feature-card img { width: 180px; margin-bottom:20px; }
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* About */
+.about { padding: 50px; text-align: center; background: #e1bee7; color: #4a148c; }
+.about-text h2 { margin-bottom: 20px; }
+
+/* Footer */
+.footer {
+  background: #512da8;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Appointment & Contact Form */
+.form-container, .contact-form {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 500px;
+  background: #cea63a;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.form-container h2, .contact-form h2 {
+  color: #512da8;
+  margin-bottom: 20px;
+}
+
+.appointment-form input, .appointment-form select, .appointment-form textarea,
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+/* Contact Form Section */
+.contact-form-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Form Labels */
+.form-label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+  display: block;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-input:focus {
+  border: 2px solid #abf107;
+  box-shadow: 0px 0px 5px #abf107;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #abf107;
+  color: black;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e6f07a;
+  transform: scale(1.05);
+}
+
+.contact-options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Adjust the space between icons */
+}
+
+.contact-icon {
+  text-align: center;
+}
+
+.social-icon {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.google-map {
+  width: 80%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Shop & Products Page */
+.shop-banner {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #d4c925, #e03772);
+  text-align: center;
+  color: #fff;
+}
+
+.accessories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px;
+  background: #f3e5f5;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background: #6e7f56;
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  width: 400px;
+}
+
+.product-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #222;
+}
+/* Cart Page */
+.cart-section { padding: 50px; text-align: center; background: #e0f2f1; }
+.cart-summary { margin-top: 20px; }
+
+/* Admin Panel */
+.admin-dashboard { padding: 50px; text-align: center; background: #f3e5f5; }
+.admin-form input { padding: 10px; margin: 10px; border-radius: 5px; }
+
+/* Admin Tables */
+.admin-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.admin-table th {
+  background-color: #512da8;
+  color: white;
+}
+
+.admin-table tr:nth-child(even) {
+  background-color: #fdfbfd;
+}
+/* Admin container */
+.admin-container {
+  width: 100%;
+ 
+  background: linear-gradient(135deg, #b39ddb, #f8bbd0);
+  color: rgb(240, 238, 238);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Admin section titles */
+.admin-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Admin card container */
+.admin-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Admin cards */
+.admin-card {
+  width: 80%;
+  max-width: 400px;
+  background: #b7d316;
+  color: rgb(77, 6, 6);
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Card hover effect */
+.admin-card:hover {
+  transform: scale(1.05);
+  background: #bd6e2d;
+}
+
+/* Logout button */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkred;
+}
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e3d1f5, #f4e1ff);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+
+/* Appointment Section */
+.appointment-container {
+  width: 90%;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  text-align: center;
+  color: #3a0d6e;
+}
+
+/* Table Styling */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 20px;
+}
+
+.appointment-table th, .appointment-table td {
+  border: 1px solid #dddddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.appointment-table th {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.appointment-table td {
+  background-color: #f5f5f5;
+}
+
+
+/* Buttons */
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.approve {
+  background-color: green;
+  color: white;
+}
+
+button.reject {
+  background-color: crimson;
+  color: white;
+}
+
+button.delete {
+  background-color: red;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+/* Center the form container */
+#appointment-container {
+  width: 90%;
+  max-width: 450px;
+  background: rgb(119, 200, 214);
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+/* Form Title */
+.form-title {
+  color: #db0e0e;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Label Styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Input Fields & Textarea */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #310404;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9f9f9;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+/* Input Focus Effect */
+.input-field:focus {
+  border: 2px solid #abf107;
+  box-shadow: 0px 0px 5px #abf107;
+}
+
+/* Submit Button */
+#submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3c2088;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+/* Button Hover Effect */
+#submit-btn:hover {
+  background: #ad151d;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #appointment-container {
+      width: 95%;
+  }
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #b39ddb, #f8bbd0);
+}
+.login-box {
+  background: #58bb4f;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.login-box h2 { margin-bottom: 20px; color: #230469; }
+.login-box input { display: block; width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+.login-box button { padding: 10px 20px; background: #a81247; border: none; border-radius: 5px; color: #c4c2ca; cursor: pointer; }
+
+@keyframes slideIn {
+  0% { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .navbar {
+    margin-top: 10px;
+  }
+}
+.cart-container {
+  width: 60%;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #6a0dad;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.checkout-btn {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.checkout-btn:hover {
+  background-color: #ff1493;
+}
+/* Appointment Form */
+.appointment-form-container {
+  width: 50%;
+  margin: 30px auto;
+  background-color: rgb(228, 207, 90);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.form-title {
+  text-align: center;
+  color: #333;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
